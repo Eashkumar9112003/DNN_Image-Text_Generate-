@@ -1,0 +1,4 @@
+batch_size: 2
+seq_len: 4
+max_text_len: 32
+dataset_size: 300
