@@ -1,4 +1,9 @@
-# StoryReasoning-Multimodal
+# DNN_Image-Text_Generate
+# Multimodal Sequence Modelling for Visual Story Understanding.
+# Project Overview
+# Project Name: StoryReasoning-Multimodal
+# Author: Eashkumar Kaki
+
 
 ## Quick Links
 - *[Experiments Notebook](experiment_notebook.ipynb)* – Full experimental workflow and implementation  
@@ -9,7 +14,7 @@
 *StoryReasoning-Multimodal** is a multimodal deep learning system designed to perform **visual story reasoning** using sequences of images and their corresponding textual descriptions. The model jointly processes visual and textual information, aligns them using contrastive learning, and models temporal dependencies using an **LSTM-based sequence model*
 
 
-The objective is to predict the **next image and text** in a story sequence given a fixed number of previous steps.
+The objective is to predict the **next image** in a story sequence given a fixed number of previous steps.
 
 ---
 
@@ -35,6 +40,30 @@ The objective is to predict the **next image and text** in a story sequence give
 - **Prediction Target:** (K + 1) image and text  
 
 ---
+## Executive Summary
+This project investigates multimodal sequence modelling for visual story understanding, a task requiring the integration of visual perception, natural language understanding, and temporal modelling. Given four image–text pairs forming a narrative, the system predicts the fifth image and its corresponding textual description while preserving narrative coherence.
+
+The model combines a convolutional neural network for visual encoding, a transformer-based language model for text encoding, multimodal feature fusion, and a recurrent temporal model. A dual-decoder design enables simultaneous generation of the next image and text from a shared narrative representation. Transfer learning is employed to reduce computational requirements, and an explicit contrastive alignment loss is introduced to strengthen semantic correspondence between visual and textual embeddings.
+
+Experiments conducted on a subset of the StoryReasoning dataset demonstrate that the model successfully captures narrative structure and semantic continuity, achieving competitive performance under limited data and training epochs.
+
+## Key Results
+
+| Metric       | Score |
+|--------------|-------|
+| BLEU         | *0.71* |
+| ROUGE-L      | *0.84* |
+| METEOR       | *0.85* |
+
+These results indicate strong lexical overlap, semantic consistency, and narrative coherence in the generated textual outputs.
+
+---
+
+## Evaluation Metrics
+Text generation quality is evaluated using standard NLP metrics:
+- BLEU  
+- ROUGE-L  
+- METEOR 
 
 ## Project Structure
 ProjectUsername/
@@ -55,6 +84,7 @@ ProjectUsername/
 
 
 ---
+
 
 ## Model Architecture
 
@@ -101,20 +131,7 @@ ProjectUsername/
 **Total Loss:**  
 Loss = Image Loss + Text Loss + λ × Contrastive Loss
 
-
 ---
-
-## Evaluation Metrics
-Text generation quality is evaluated using standard NLP metrics:
-- BLEU  
-- ROUGE-L  
-- METEOR  
-
-**Final Evaluation Results:**  
-- BLEU: 0.71  
-- ROUGE-L: 0.84  
-- METEOR: 0.85  
-
 ---
 
 ## Visualizations and Outputs
@@ -135,6 +152,10 @@ All results are automatically saved to the `results/` directory.
 - Evaluation metric scores  
 
 ---
+## Limitations and Future Work
+- Small training subset limits generalization.
+- Image decoder struggles with fine-grained visual detail.
+- Recurrent temporal modelling lacks an explicit attention mechanism.
 
 ## How to Run
 
