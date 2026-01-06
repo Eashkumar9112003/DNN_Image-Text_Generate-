@@ -5,8 +5,9 @@
 - *[Evaluation Results](results/)* – All The results are in this folder 
 - *[Model Architecture](src/)* – Encoders, fusion, temporal modelling, and decoders.
 
-## Project Overview
-**StoryReasoning-Multimodal** is a multimodal deep learning system designed to perform **visual story reasoning** using sequences of images and their corresponding textual descriptions. The model jointly processes visual and textual information, aligns them using contrastive learning, and models temporal dependencies using an **LSTM-based sequence model**.
+- ## Innovation Summary
+*StoryReasoning-Multimodal** is a multimodal deep learning system designed to perform **visual story reasoning** using sequences of images and their corresponding textual descriptions. The model jointly processes visual and textual information, aligns them using contrastive learning, and models temporal dependencies using an **LSTM-based sequence model*
+
 
 The objective is to predict the **next image and text** in a story sequence given a fixed number of previous steps.
 
