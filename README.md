@@ -1,8 +1,8 @@
 # DNN_Image-Text_Generate-
-# StoryReasoning-Multimodal
+# Multimodal Sequence Modelling for Visual Story Understanding
 
 ## Project Overview
-**StoryReasoning-Multimodal** is a multimodal deep learning system designed to perform **visual story reasoning** using sequences of images and their corresponding textual descriptions. The model jointly processes visual and textual information, aligns them using contrastive learning, and models temporal dependencies using an **LSTM-based sequence model**.
+**Multimodal Sequence Modelling for Visual Story Understanding** is a multimodal deep learning system designed to perform **visual story reasoning** using sequences of images and their corresponding textual descriptions. The model jointly processes visual and textual information, aligns them using contrastive learning, and models temporal dependencies using an **LSTM-based sequence model**.
 
 The objective is to predict the **next image and text** in a story sequence given a fixed number of previous steps.
 
